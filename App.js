@@ -7,29 +7,48 @@ import ReactDOM from 'react-dom/client';
 
 
 
-const parent = React.createElement(
-    'div', 
-    {id: 'parent'}, 
-    [
-        React.createElement
-        (
-            'div', 
-            {id: 'child1', key: 'child1'}, 
-            [
-                React.createElement('h1', {id: 'heading1', key: 'heading1'}, 'I am h1 tag'),
-                React.createElement('h2', {id: 'heading2', key: 'heading2'}, 'I am h2 tag')
-            ]
-        ),
-        React.createElement
-        (
-            'div', 
-            {id: 'child2', key: 'child2'}, 
-            [
-                React.createElement('h3', {id: 'heading3', key: 'heading3'}, 'I am h3 tag'),
-                React.createElement('h4', {id: 'heading4', key: 'heading4'}, 'I am h4 tag')
-            ],
-        )
-    ]
+// const parent = React.createElement(
+//     'div', 
+//     {id: 'parent'}, 
+//     [
+//         React.createElement
+//         (
+//             'div', 
+//             {id: 'child1', key: 'child1'}, 
+//             [
+//                 React.createElement('h1', {id: 'heading1', key: 'heading1'}, 'I am h1 tag'),
+//                 React.createElement('h2', {id: 'heading2', key: 'heading2'}, 'I am h2 tag')
+//             ]
+//         ),
+//         React.createElement
+//         (
+//             'div', 
+//             {id: 'child2', key: 'child2'}, 
+//             [
+//                 React.createElement('h3', {id: 'heading3', key: 'heading3'}, 'I am h3 tag'),
+//                 React.createElement('h4', {id: 'heading4', key: 'heading4'}, 'I am h4 tag')
+//             ],
+//         )
+//     ]
+// );
+// const root = ReactDOM.createRoot(document.getElementById('root'));
+// root.render(parent);
+
+
+
+const jsxHeading = <h1 id="heading" className="heading" tabIndex="1">Hello, React!</h1>
+
+const jsxParent = (
+    <div id="parent">
+        <div id="child1">
+            <h1 id="heading1">I am h1 tag</h1>
+            <h2 id="heading2">I am h2 tag</h2>
+        </div>
+        <div id="child2">
+            <h3 id="heading3">I am h3 tag</h3>
+            <h4 id="heading4">I am h4 tag</h4>
+        </div>
+    </div>
 );
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(parent);
+root.render(jsxParent);
